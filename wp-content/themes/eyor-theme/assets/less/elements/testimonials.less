@@ -1,0 +1,312 @@
+.qed-testimonials{
+	width: 100%;
+
+	&__title {
+		color: #ffffff;
+		font-family: @harfang-pro;
+		font-weight: 400;
+		font-size: 40px;
+		text-align: center;
+		margin: 20px auto 80px;
+
+	}
+
+	&__wrap {
+		display: block;
+		width: 100%;
+		height: 652px;
+		padding: 60px 0;
+		background-image: url("@{assetsUrl}images/bg/testimonial-bg.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+
+			.swiper-slide {
+				width: 100%;
+				height: 200px;
+				text-align: center;
+				font-size: 18px;
+				background: transparent !important;
+			}
+		}
+	}
+
+	&__inner-wrap {
+		display: block;
+		max-width: 1080px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	&__slide {
+
+		&-wrap {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+			/* tweak where items line
+			up on the row
+			valid values are: flex-start,
+			flex-end, space-between,
+			space-around, stretch */
+			-webkit-align-content: flex-end;
+			align-content: flex-end;
+		}
+	}
+
+	&__item {
+		-webkit-flex: 1 0 25%;
+		flex: 1 0 25%;
+		text-align: center;
+
+		&--with-images {
+
+			.qed-testimonials__item {
+
+				&__image-wrap {
+					display: block;
+					min-width: 108px;
+					width: 108px;
+					height: 108px;
+					border-radius: 50%;
+					overflow: hidden;
+					background-position: center;
+					background-size: cover;
+					margin: 0 auto 32px;
+				}
+
+				&__content {
+					display: block;
+					width: 100%;
+					text-align: center;
+				}
+			}
+
+		}
+
+		&__content {
+			display: block;
+			width: 100%;
+			.mix-center-text();
+			padding: 0 30px;
+		}
+
+		&__description {
+			color: #ffffff;
+			font-family: @franklin-gothic-urw-condensed;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 18px;
+			line-height: 1.4em;
+		}
+
+		&__name {
+			color: #ffffff;
+			font-family: @franklin-gothic-urw-condensed;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 2.25em;
+			text-transform: uppercase;
+			.margin(15px, 0, 0, 0);
+		}
+	}
+
+	.slick-dots {
+		bottom: -80px;
+	}
+}
+
+@media(max-width:@responsive-breakpoint2){
+	.qed-testimonials{
+
+		&__wrap {
+
+			.swiper-container {
+
+				.swiper-slide {
+
+				}
+			}
+		}
+
+		&__inner-wrap {
+
+		}
+
+		&__item {
+			padding: 0 20px;
+			//margin: 30px auto;
+
+			&--with-images {
+
+				.qed-testimonials__item {
+
+					&__image-wrap {
+					}
+
+					&__content {
+					}
+				}
+
+			}
+
+			&__content {
+			}
+
+			&__description {
+				font-size: 18px;
+				line-height: 1.3em;
+			}
+
+			&__name {
+				font-size: 14px;
+				line-height: 1.2em;
+
+				a {
+					font-size: 14px;
+					line-height: 1.2em;
+				}
+			}
+		}
+
+		.swiper-container {
+
+			.swiper-slide {
+			}
+		}
+	}
+}
+
+@media(max-width:@responsive-breakpoint3){
+	.qed-testimonials{
+
+		&__wrap {
+
+			.swiper-container {
+
+				.swiper-slide {
+
+				}
+			}
+		}
+
+		&__inner-wrap {
+
+		}
+
+		&__item {
+			padding: 0 20px;
+			//margin: 30px auto;
+
+			&--with-images {
+
+				.qed-testimonials__item {
+
+					&__image-wrap {
+						min-width: 100px;
+						width: 100px;
+						height: 100px;
+					}
+
+					&__content {
+					}
+				}
+
+			}
+
+			&__content {
+				.padding-left(25px);
+			}
+
+			&__description {
+				font-size: 16px;
+				line-height: 1.2em;
+			}
+
+			&__name {
+				font-size: 12px;
+				line-height: 1em;
+
+				a {
+					font-size: 12px;
+					line-height: 1em;
+				}
+			}
+		}
+
+		.swiper-container {
+
+			.swiper-slide {
+			}
+		}
+	}
+}
+
+@media(max-width:360px){
+	.qed-testimonials{
+
+		&__wrap {
+
+			.swiper-container {
+
+				.swiper-slide {
+
+				}
+			}
+		}
+
+		&__inner-wrap {
+
+		}
+
+		&__item {
+
+			&--with-images {
+
+				.qed-testimonials__item {
+
+					&__image-wrap {
+					}
+
+					&__content {
+					}
+				}
+
+			}
+
+			&__content {
+				.padding-left(25px);
+			}
+
+			&__description {
+				font-size: 14px;
+				line-height: 1.2em;
+			}
+
+			&__name {
+
+				a {
+
+				}
+			}
+		}
+
+		.swiper-container {
+
+			.swiper-slide {
+			}
+		}
+	}
+}

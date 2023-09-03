@@ -1,0 +1,4 @@
+@bi-app-left:left;
+@bi-app-right:right;
+@bi-app-direction:ltr;
+@bi-app-invert-direction:rtl;

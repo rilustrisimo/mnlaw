@@ -1,0 +1,48 @@
+a {
+  font-family: @franklin-gothic-urw-condensed;
+  font-weight: 500;
+  color: @links-color;
+  .mix-transition();
+
+  &:hover {
+    color: @links-hover;
+    text-decoration: none;
+  }
+
+  &:focus, &:active {
+    color: @links-color;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.footer {
+  .widget {
+    a {
+      font-family: @franklin-gothic-urw-condensed;
+      font-weight: 400;
+      color: @main-color1;
+      opacity: @footer-title-opacity;
+
+      &:hover {
+        color: @main-color1;
+        text-shadow: 1px 0 0 @main-color1;
+      }
+    }
+  }
+}
+
+.textwidget {
+  a {
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.header {
+  a {
+    border-bottom: none;
+  }
+}

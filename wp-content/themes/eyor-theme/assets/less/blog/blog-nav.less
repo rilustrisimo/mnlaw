@@ -1,0 +1,27 @@
+#blog-nav {
+	text-align: center;
+
+	a {
+		display: inline-block;
+		min-width: 124px;
+		height:45px;
+		line-height: 45px;
+		background: transparent;
+		border:2px solid #005dab;
+		border-radius: 0;
+		margin: 0 auto;
+		color: #005dab;
+		text-transform: uppercase;
+		.mix-transition();
+		font-family: @main-font-family;
+		font-weight: 500;
+		font-size: 14px;
+		padding: 0 17px;
+
+		&:focus, &:hover {
+			outline:0;
+			background-color: #005dab;
+			color: #ffffff;
+		}
+	}
+}

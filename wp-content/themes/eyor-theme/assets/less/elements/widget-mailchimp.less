@@ -1,0 +1,50 @@
+.widget_mc4wp_form_widget{
+	background-color: #f8f6f6;
+	padding: 36px 18px;
+
+	.widget__title {
+		color: @main-color2;
+		font: normal 700 ~"20px/24px" @main-font-family;
+		text-align: center;
+	}
+
+	.mc4wp-form {
+
+		.mc4wp-form-fields {
+			text-align: center;
+		}
+	}
+
+	.mc4wp-response {
+		text-align: center;
+	}
+
+	.mc4wp-success{
+		margin:0 0 10px;
+		padding:0;
+		background:transparent;
+		color:@succsses-color;
+		font-weight: 700;
+	}
+
+	.mc4wp-error{
+		margin:0 0 10px;
+		padding:0;
+		background:transparent;
+		color:@warning-color;
+		font-weight: 700;
+	}
+}
+
+.sidebar{
+	.widget_mc4wp_form_widget{
+		background:#f8f6f6;
+
+		.widget{
+			&__title{
+				color:fade(@main-color2, 90%);
+				border-bottom-color:fade(@main-color2, 15%);
+			}
+		}
+	}
+}

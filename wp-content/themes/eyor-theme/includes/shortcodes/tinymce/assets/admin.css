@@ -1,0 +1,40 @@
+#qedShortcodesDialogBody .help-note {
+	color: #888888;
+	display: block;
+	font-size: 11px;
+	padding: 5px;
+}
+
+#qedShortcodesDialogBody .buttons-toolbar {
+	overflow:hidden;
+	margin:25px 0 25px 10px;
+}
+
+#qedShortcodesDialogBody span.required{
+	color:#EE0000;
+}
+
+.qed-shortcodes-input.input-text, .qed-shortcodes-input.input-textarea{
+	width:99%;
+}
+
+.error-required .qed-shortcodes-input{
+	border-color:#EE0000;
+}
+
+.mce-widget button.sh-render-active{
+	background-color:#F4C5C5;
+}
+
+#SD_overlay {
+	z-index: 999992 !important;
+}
+#SD_window {
+	z-index: 999995 !important;
+}
+.select2-drop-mask{
+	z-index: 999998 !important;
+}
+.select2-drop{
+	z-index: 999999 !important;
+}

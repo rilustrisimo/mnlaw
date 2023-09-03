@@ -1,0 +1,249 @@
+@import "main-variables.less"; /* @variables-file */
+@charset "utf-8";
+
+@import "rtl/mixins.less";
+.mix-rtl-include-font-awesome-overwrite();
+
+@import "main-mixins.less";
+
+/*=== General ===*/
+body{
+	background:@body-bg;
+	font:@main-font-style @main-font-weight ~"@{main-text-size}/@{main-line-height}" @main-font-family;
+	color:@main-text-color;
+	font-smooth:never;
+	-webkit-font-smoothing:antialiased;
+	.mix-direction-change(@bi-app-direction);
+}
+
+img{
+	max-width:100%;
+	height:auto;
+}
+
+address{
+	font-style:normal;
+}
+
+.google-map img{
+	max-width:none;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family:@heading-font-family;
+	font-weight:@heading-font-weight;
+	font-style:@heading-font-style;
+	text-align: center;
+}
+
+h1, .h1, h1 > a {
+	font-family: @heading-one-font-family;
+	font-weight: @heading-one-font-weight;
+	font-style: @heading-one-font-style;
+	font-size: @heading-one-text-size;
+	line-height: @heading-one-line-height;
+	color: @heading-one-text-color;
+	text-transform: @heading-one-text-transform;
+}
+h2, .h2, h2 > a {
+	font-family: @heading-two-font-family;
+	font-weight: @heading-two-font-weight;
+	font-style: @heading-two-font-style;
+	font-size: @heading-two-text-size;
+	line-height: @heading-two-line-height;
+	color: @heading-two-text-color;
+	text-transform: @heading-two-text-transform;
+}
+h3, .h3, h3 > a {
+	font-family: @heading-three-font-family;
+	font-weight: @heading-three-font-weight;
+	font-style: @heading-three-font-style;
+	font-size: @heading-three-text-size;
+	line-height: @heading-three-line-height;
+	color: @heading-three-text-color;
+	text-transform: @heading-three-text-transform;
+}
+h4, .h4, h4 > a {
+	font-family: @heading-four-font-family;
+	font-weight: @heading-four-font-weight;
+	font-style: @heading-four-font-style;
+	font-size: @heading-four-text-size;
+	line-height: @heading-four-line-height;
+	color: @heading-four-text-color;
+	text-transform: @heading-four-text-transform;
+}
+h5, .h5, h5 > a{
+	font-family: @heading-five-font-family;
+	font-weight: @heading-five-font-weight;
+	font-style: @heading-five-font-style;
+	font-size: @heading-five-text-size;
+	line-height: @heading-five-line-height;
+	color: @heading-five-text-color;
+	text-transform: @heading-five-text-transform;
+}
+h6, .h6, h6 > a {
+	font-family: @heading-six-font-family;
+	font-weight: @heading-six-font-weight;
+	font-style: @heading-six-font-style;
+	font-size: @heading-six-text-size;
+	line-height: @heading-six-line-height;
+	color: @heading-six-text-color;
+	text-transform: @heading-six-text-transform;
+}
+
+hr{
+	border-top:1px solid #e6e6e6;
+}
+
+table{
+	.text-align(left);
+	border: none;
+}
+
+th, td{
+	padding:5px;
+}
+
+.qed-table{
+	&--full-width{
+		width:100% !important;
+	}
+
+	&--without-border{
+		border:none;
+
+		td, th{
+			border:none;
+		}
+	}
+}
+
+.layout-content{
+	overflow:hidden;
+}
+
+.section-white{
+	.mix-outside-of-container();
+	background-color:@main-color-white;
+}
+
+.section-white-box{
+	.mix-layout-box();
+}
+
+.section-title{
+	margin-bottom:0 !important;
+	padding-top:25px !important;
+}
+
+.block-after-indent{
+	.mix-margin-bottom();
+
+	&:last-child{
+		margin-bottom:0
+	}
+}
+
+.product-rategories + .qedgrid,
+.product-rategories + .qedlist,
+.product-rategories + .qedgrid-sorting{
+	.mix-margin-top();
+}
+
+.text-center{
+	text-align:center;
+}
+
+html.swipebox-html #swipebox-overlay{
+	direction:ltr;
+}
+
+.qed-table-responsive{
+	.mix-responsive-table();
+}
+
+// Responsive
+@media(max-width:@responsive-breakpoint2){
+
+	body{
+		background:@body-bg;
+		font:@main-font-style @main-font-weight ~"@{main-text-size}/@{main-line-height}" @main-font-family;
+		color:@main-text-color;
+		font-smooth:never;
+		-webkit-font-smoothing:antialiased;
+		.mix-direction-change(@bi-app-direction);
+	}
+
+	h1, h2, h3, h4, h5, h6{
+		font-family:@heading-font-family;
+		font-weight:@heading-font-weight;
+		font-style:@heading-font-style;
+	}
+
+	h1, .h1, h1 > a {
+		font-family: @heading-one-font-family;
+		font-weight: @heading-one-font-weight;
+		font-style: @heading-one-font-style;
+		font-size: @heading-one-text-size;
+		color: @heading-one-text-color;
+		text-transform: @heading-one-text-transform;
+	}
+	h2, .h2, h2 > a {
+		font-family: @heading-two-font-family;
+		font-weight: @heading-two-font-weight;
+		font-style: @heading-two-font-style;
+		font-size: @heading-two-text-size;
+		color: @heading-two-text-color;
+		text-transform: @heading-two-text-transform;
+	}
+	h3, .h3, h3 > a {
+		font-family: @heading-three-font-family;
+		font-weight: @heading-three-font-weight;
+		font-style: @heading-three-font-style;
+		font-size: @heading-three-text-size;
+		color: @heading-three-text-color;
+		text-transform: @heading-three-text-transform;
+	}
+	h4, .h4, h4 > a {
+		font-family: @heading-four-font-family;
+		font-weight: @heading-four-font-weight;
+		font-style: @heading-four-font-style;
+		font-size: @heading-four-text-size;
+		color: @heading-four-text-color;
+		text-transform: @heading-four-text-transform;
+	}
+	h5, .h5, h5 > a{
+		font-family: @heading-five-font-family;
+		font-weight: @heading-five-font-weight;
+		font-style: @heading-five-font-style;
+		font-size: @heading-five-text-size;
+		color: @heading-five-text-color;
+		text-transform: @heading-five-text-transform;
+	}
+	h6, .h6, h6 > a {
+		font-family: @heading-six-font-family;
+		font-weight: @heading-six-font-weight;
+		font-style: @heading-six-font-style;
+		font-size: @heading-six-text-size;
+		color: @heading-six-text-color;
+		text-transform: @heading-six-text-transform;
+	}
+
+}
+
+@import "wp-core.less";
+/*=== end General ===*/
+
+@import "indent.less";
+
+@import "vendor/all.less";
+
+@import "layout/all.less";
+
+@import "elements/all.less";
+
+@import "pages/all.less";
+
+@import "blog/all.less";
+
+@import "wpml.less";

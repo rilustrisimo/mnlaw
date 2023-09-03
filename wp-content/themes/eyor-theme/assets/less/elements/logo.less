@@ -1,0 +1,55 @@
+.logo {
+  position: relative;
+  z-index: 1;
+  .float(left);
+
+  a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: @header-text-color;
+    font-family: @alternative-text-family;
+    font-size: 1.267em;
+  }
+}
+
+#logoLink {
+  img {
+    max-height: @header__content-height;
+    max-width: 300px;
+  }
+}
+
+#retinaImageLogo {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min--moz-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+
+  #retinaImageLogo {
+    display: inline;
+    // max-width:50%;
+  }
+
+  #normalImageLogo {
+    display: none;
+  }
+}
+
+@media (max-width: 392px) {
+  #logoLink img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: @responsive-breakpoint2) {
+  .logo {
+    float: none;
+  }
+}

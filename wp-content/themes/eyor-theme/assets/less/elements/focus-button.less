@@ -1,0 +1,541 @@
+.focus-buttons {
+  width: 100%;
+
+  &__inner-wrap {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+
+    .focus-button {
+      display: block;
+      width: 378px;
+      height: 254px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+
+      &__items {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        /* tweak where items line
+        up on the row
+        valid values are: flex-start,
+        flex-end, space-between,
+        space-around, stretch */
+        -webkit-align-content: flex-end;
+        align-content: flex-end;
+      }
+
+      &__item {
+        -webkit-flex: 1 0 33%;
+        flex: 1 0 33%;
+        text-align: center;
+        height: 254px;
+      }
+
+      &__image {
+        display: block;
+        width: 378px;
+        height: 254px;
+        opacity: 0.07;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        .mix-transition();
+      }
+
+      &__content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        padding: 0 30px;
+        text-align: center;
+        .mix-transform(translate(0, -50%));
+      }
+
+      &:hover, &.active {
+        .focus-button__image {
+          opacity: 1;
+        }
+
+        .focus-button__title {
+          display: none;
+        }
+
+        .focus-button__intro-text {
+          display: none;
+        }
+
+        .focus-button__link {
+          display: inline-block;
+        }
+      }
+
+      &__title {
+        display: block;
+        color: #002a5c;
+        font-family: @harfang-pro;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.25em;
+        .mix-transition();
+      }
+
+      &__intro-text {
+        display: block;
+        color: #6d6d6d;
+        font-family: @franklin-gothic-urw-condensed;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5em;
+        .mix-transition();
+      }
+
+      &__link {
+        display: none;
+        height: 42px;
+        font-family: @oswald !important;
+        .mix-transition();
+      }
+
+      &__indent-after {
+        margin-bottom: 25px;
+      }
+
+      .active {
+        background-color: #005dab;
+
+        .focus-button__image {
+
+          &-default {
+            display: none;
+          }
+
+          &-hover {
+            display: block;
+          }
+        }
+
+        .focus-button__title {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &__home-inner-wrap {
+    max-width: 1268px;
+    width: 100%;
+    margin: 0 auto;
+
+    .focus-button {
+      display: block;
+      width: 316px;
+      height: 223px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+
+      &__items {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        /* tweak where items line
+        up on the row
+        valid values are: flex-start,
+        flex-end, space-between,
+        space-around, stretch */
+        -webkit-align-content: flex-end;
+        align-content: flex-end;
+      }
+
+      &__item {
+        -webkit-flex: 1 0 25%;
+        flex: 1 0 25%;
+        text-align: center;
+        height: 223px;
+      }
+
+      &__image {
+        display: block;
+        width: 316px;
+        height: 223px;
+        opacity: 0.07;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        .mix-transition();
+      }
+
+      &__content {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        padding: 0 30px;
+        text-align: center;
+        .mix-transform(translate(0, -50%));
+      }
+
+      &:hover {
+        .focus-button__image {
+          opacity: 1;
+        }
+
+        .focus-button__title {
+          display: none;
+        }
+
+        .focus-button__intro-text {
+          display: none;
+        }
+
+        .focus-button__link {
+          display: inline-block;
+        }
+      }
+
+      &__title {
+        display: block;
+        color: #002a5c;
+        font-family: @harfang-pro;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.25em;
+        .mix-transition();
+      }
+
+      &__intro-text {
+        display: block;
+        color: #6d6d6d;
+        font-family: @franklin-gothic-urw-condensed;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5em;
+        .mix-transition();
+      }
+
+      &__link {
+        display: none;
+        height: 42px;
+        font-family: @oswald !important;
+        .mix-transition();
+      }
+
+      &__indent-after {
+        margin-bottom: 25px;
+      }
+
+      .active {
+        background-color: #005dab;
+
+        .focus-button__image {
+
+          &-default {
+            display: none;
+          }
+
+          &-hover {
+            display: block;
+          }
+        }
+
+        .focus-button__title {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &__content {
+
+    &-wrap {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+#focus-buttons {
+
+  &__content {
+
+    &-wrapper {
+      max-width: 942px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media(max-width:@responsive-breakpoint1){
+  .focus-buttons {
+
+    &__inner-wrap {
+
+    }
+
+    &__home-inner-wrap {
+
+    }
+
+    &__list {
+
+    }
+
+    .focus-button {
+      margin-bottom: 25px;
+
+      &__item {
+        width: 50%;
+
+        &-link {
+
+        }
+      }
+
+      &__image {
+
+
+        &-default {
+
+        }
+
+        &-hover {
+
+        }
+      }
+
+      &__title {
+
+      }
+
+      &__indent-after {
+
+      }
+
+      &:hover {
+
+        .focus-button__item {
+
+          &-link {
+
+          }
+        }
+
+        .focus-button__image {
+
+          &-default {
+
+          }
+
+          &-hover {
+
+          }
+        }
+
+        .focus-button__title {
+
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:620px){
+  .focus-buttons {
+
+    &__inner-wrap {
+
+    }
+
+    &__home-inner-wrap {
+
+    }
+
+    &__list {
+
+    }
+
+    .focus-button {
+      margin-bottom: 15px;
+
+      &__item {
+
+        &-link {
+
+        }
+
+        &-solo {
+          width: 100%;
+        }
+
+        &-duo {
+          width: 50%;
+        }
+
+        &-tri {
+          width: 50%;
+        }
+
+        &-quad {
+          width: 50%;
+        }
+      }
+
+      &__image {
+
+
+        &-default {
+
+        }
+
+        &-hover {
+
+        }
+      }
+
+      &__title {
+
+      }
+
+      &__indent-after {
+
+      }
+
+      &:hover {
+
+        .focus-button__item {
+
+          &-link {
+
+          }
+        }
+
+        .focus-button__image {
+
+          &-default {
+
+          }
+
+          &-hover {
+
+          }
+        }
+
+        .focus-button__title {
+
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:420px){
+  .focus-buttons {
+
+    &__inner-wrap {
+
+    }
+
+    &__home-inner-wrap {
+
+    }
+
+    &__list {
+
+    }
+
+    .focus-button {
+      margin-bottom: 15px;
+
+      &__item {
+        width: 100%;
+
+        &-link {
+
+        }
+      }
+
+      &__image {
+
+
+        &-default {
+
+        }
+
+        &-hover {
+
+        }
+      }
+
+      &__title {
+
+      }
+
+      &__indent-after {
+
+      }
+
+      &:hover {
+
+        .focus-button__item {
+
+          &-link {
+
+          }
+        }
+
+        .focus-button__image {
+
+          &-default {
+
+          }
+
+          &-hover {
+
+          }
+        }
+
+        .focus-button__title {
+
+        }
+      }
+    }
+  }
+}

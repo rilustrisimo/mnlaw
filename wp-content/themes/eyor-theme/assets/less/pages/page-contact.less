@@ -1,0 +1,204 @@
+@__border-style: 1px solid #353535;
+.page-contact {
+
+  .contact-info {
+
+    &__wrap {
+      text-align: center;
+    }
+
+    &__address,
+    &__mail,
+    &__phone,
+    &__email {
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+
+    &__title {
+      display: inline-block;
+      width: 25px;
+      //.float(left);
+      color: @main-color2;
+      font-family: @franklin-gothic-urw-condensed;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 36px;
+    }
+
+    &__value {
+      display: inline-block;
+      //.float(left);
+      color: #6d6d6d;
+      font-family: @franklin-gothic-urw-condensed;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 36px;
+
+      a {
+        color: #6d6d6d;
+        font-family: @franklin-gothic-urw-condensed;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+    }
+
+    form.wpcf7-form {
+      max-width: 384px;
+      margin: 0 auto;
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="number"],
+      input[type="password"],
+      input[type="date"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        display: block;
+        height: 42px;
+        line-height: 42px;
+        margin: 0 auto 12px;
+        padding: 0 20px;
+        max-width: 512px;
+        width: 100%;
+        font-size: 16px;
+
+        &::-webkit-input-placeholder {
+          line-height: 42px;
+          text-transform: none;
+        }
+
+        &::-moz-placeholder {
+          line-height: 42px;
+          opacity: 1;
+          text-transform: none;
+        }
+
+        &:-ms-input-placeholder {
+          line-height: 42px;
+          text-transform: none;
+        }
+      }
+
+      textarea {
+        display: block;
+        max-width: 512px;
+        width: 100%;
+        min-height: 100px !important;
+        height: 100px !important;
+        margin: 0 auto 12px;
+        padding: 5px 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-size: 16px;
+
+        &::-webkit-input-placeholder {
+          line-height: 42px;
+          text-transform: none;
+        }
+
+        &::-moz-placeholder {
+          line-height: 42px;
+          opacity: 1;
+          text-transform: none;
+        }
+
+        &:-ms-input-placeholder {
+          line-height: 42px;
+          text-transform: none;
+        }
+      }
+
+      .wpcf7-recaptcha {
+        margin-bottom: 10px;
+      }
+
+      .wpcf7-recaptcha > div {
+        margin: 0 auto;
+      }
+
+      select.selectpicker {
+        display: none !important;
+      }
+
+      .bootstrap-select {
+        width: 100%;
+        max-width: 384px;
+        height: auto;
+        line-height: normal;
+        color: #353535;
+        font: normal 400 ~"13.5px/19px" @main-font-family;
+        margin: 0 auto 5px;
+
+        .btn-default {
+          width: 100%;
+          padding: 7px 35px 7px 15px;
+          .mix-center-text();
+          height: auto;
+          line-height: normal;
+          font: normal 400 ~"13.5px/19px" @main-font-family;
+          //border: 1px solid #353535;
+          border-radius: 0;
+          z-index: 1002;
+
+          &:hover,
+          &:focus,
+          &.focus,
+          &:active
+          &.active {
+            border: 1px solid #353535;
+            outline: 0 !important;
+            box-shadow: none;
+            z-index: auto;
+          }
+
+          span {
+            font: normal 400 ~"13.5px/19px" @main-font-family;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.page-template-template-contact-page {
+
+  .header-section{
+
+    &__content {
+      max-width: 1266px;
+      width: 100%;
+      margin: 0 auto;
+
+      .button {
+        display: inline-block;
+        height: 42px;
+        line-height: 42px;
+        .float(right);
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: @responsive-breakpoint1) {
+  .page-contact {
+
+    .contact-info {
+
+      &__wrap {
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+    }
+  }
+}

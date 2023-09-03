@@ -1,0 +1,406 @@
+@__responsive-slider-breakpoint1: 1280px;
+@__responsive-slider-breakpoint2: 1140px;
+
+.slider {
+  width: 100%;
+  height: @slider-height;
+  overflow: hidden;
+  position: relative;
+
+  &-home {
+    height: @slider-home-height;
+
+    .slick-slide {
+      .header-section-mask {
+        &:hover {
+          cursor: default !important;
+        }
+      }
+    }
+  }
+
+  .slick-slide {
+    width: 100%;
+    height: @slider-height;
+    text-align: center;
+    font-size: 18px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .header-section-mask {
+      z-index: 51;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-home {
+      height: @slider-home-height;
+    }
+
+    &__title {
+      color: #ffffff;
+      font-family: @kings-caslon-display;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 66px;
+      text-transform: none;
+      .text-align(left);
+      letter-spacing: -1px;
+      margin-bottom: 50px;
+
+      &-wrap {
+        display: block;
+        max-width: 1266px;
+        width: 100%;
+        //background-color: rgba(255, 255, 255, 0.8);
+        //padding: 30px 25px 30px 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .translate(-50%, -50%);
+        z-index: 52;
+      }
+
+      &-inner-wrap {
+        .float(left);
+        max-width: 720px;
+      }
+    }
+
+    &__subtitle {
+      color: #ffffff;
+      font-family: @franklin-gothic-urw-condensed;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 30px;
+      text-transform: none;
+      .text-align(left);
+      margin-bottom: 50px;
+    }
+
+    &__button {
+      text-align: left;
+
+      .button {
+        display: inline-block;
+        height: 42px;
+        line-height: 42px;
+        font-family: @franklin-gothic-urw-condensed;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 120px;
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  .translate(-50%, 0);
+  width: 220px;
+  height: 110px;
+  text-align: center;
+  color: #ffffff;
+
+  span {
+    &.text {
+      font-size: 13px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.bounce {
+  color: #a19a93;
+  font-size: 50px !important;
+  padding-top: 10px;
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+  40% {-webkit-transform: translateY(-30px);}
+  60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+  40% {-moz-transform: translateY(-30px);}
+  60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+  40% {-o-transform: translateY(-30px);}
+  60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-30px);}
+  60% {transform: translateY(-15px);}
+}
+
+// Responsive
+@media (max-width: @__responsive-slider-breakpoint1) {
+  .slider {
+
+    &-home {
+
+    }
+
+    .slick-slide {
+
+      &-home {
+
+      }
+
+      &__title {
+        font-size: 36px;
+        line-height: 36px;
+
+        &-wrap {
+
+        }
+
+        &-inner-wrap {
+        }
+      }
+
+      &__subtitle {
+
+      }
+    }
+  }
+}
+
+@media (max-width: @__responsive-slider-breakpoint2) {
+  .slider {
+
+    &-home {
+      height: 420px;
+    }
+
+    .slick-slide {
+
+      &-home {
+        height: 420px;
+      }
+
+      &__title {
+        font-size: 28px;
+        line-height: 28px;
+
+        &-wrap {
+
+        }
+
+        &-inner-wrap {
+        }
+      }
+
+      &__subtitle {
+        font-size: 23px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+@media (max-width: @responsive-breakpoint1) {
+  .slider {
+
+    &-home {
+      height: 420px;
+    }
+
+    .slick-slide {
+
+      &-home {
+        height: 420px;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 8px;
+
+        &-wrap {
+
+        }
+
+        &-inner-wrap {
+        }
+      }
+
+      &__subtitle {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: @responsive-breakpoint2) {
+  .slider {
+    height: 350px;
+
+    &-home {
+      height: 350px;
+    }
+
+    .slick-slide {
+      width: 100% !important;
+      height: 350px;
+
+      &-home {
+        height: 350px;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 5px;
+
+        &-wrap {
+
+        }
+
+        &-inner-wrap {
+        }
+      }
+
+      &__subtitle {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: @responsive-breakpoint3) {
+  .slider {
+    height: 325px;
+
+    &-home {
+      height: 325px;
+    }
+
+    .slick-slide {
+      width: 100% !important;
+      height: 325px;
+
+      &-home {
+        height: 325px;
+      }
+
+      &__title {
+        font-size: 22px;
+        line-height: 22px;
+        margin-bottom: 3px;
+
+        &-wrap {
+          .float(left);
+          width: 60%;
+          .translate(0, -60%);
+        }
+
+        &-inner-wrap {
+        }
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .slider {
+    height: 285px;
+
+    &-home {
+      height: 285px;
+    }
+
+    .slick-slide {
+      width: 100% !important;
+      height: 285px;
+
+      &-home {
+        height: 285px;
+      }
+
+      &__title {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 3px;
+
+        &-wrap {
+
+        }
+
+        &-inner-wrap {
+        }
+      }
+
+      &__subtitle {
+        font-size: 17px;
+        line-height: 17px;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .slider {
+    height: 245px;
+
+    &-home {
+      height: 245px;
+    }
+
+    .slick-slide {
+      width: 100% !important;
+      height: 245px;
+
+      &-home {
+        height: 245px;
+      }
+
+      &__title {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 2px;
+
+        &-wrap {
+          width: 65%;
+        }
+
+        &-inner-wrap {
+        }
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+.header {
+  display: block;
+  width: 100%;
+  color: @header-text-color;
+  background: transparent !important;
+  min-height: @header__content-height;
+
+  .top_layer {
+    display: block;
+    height: 73px !important;
+    line-height: 73px !important;
+    background: #ffffff;
+
+    h1 {
+      font-family: @franklin-gothic-urw-condensed;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 73px !important;
+      text-align: center;
+      text-transform: capitalize;
+      margin: 0 !important;
+    }
+
+    .hamburger-wrap {
+      display: block;
+      float: right;
+      width: 104px;
+      height: 73px;
+      border-left: 1px solid #cccccc;
+      .mix-center-text();
+
+      &-inner {
+        display: block;
+        width: 100%;
+        .mix-center-text();
+
+        #hamburger-menu {
+          display: block;
+          width: 42px;
+          height: 42px;
+          background-image: url('@{assetsUrl}images/hamburger.png');
+          background-repeat: no-repeat;
+          text-indent: -9999px;
+          transition: none;
+        }
+
+        .hamburger-menu-close {
+          background-position: 0 -42px;
+        }
+
+        .hamburger-menu-open {
+          background-position: 0 0;
+        }
+      }
+    }
+  }
+
+  .middle_layer {
+    display: block;
+    height: 73px;
+    line-height: 73px;
+    background: rgba(0, 42, 92, 0.9);
+
+    .content-popup-wrap {
+      text-align: center;
+
+      span.contact-popup-intro {
+        display: inline-block;
+        font-family: @kings-caslon-display;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.1em;
+        color:#fff;
+        margin-right: 16px;
+      }
+
+      a#contact-popup-btn {
+        display: inline-block;
+      }
+    }
+  }
+
+  .bottom_layer {
+    visibility: hidden;
+    height: 42px;
+    line-height: 42px;
+    background: #ffffff;
+    transition: 200ms ease;
+  }
+
+  &__content {
+    //min-height: @header__content-height;
+    //line-height: @header__content-height;
+    position: relative;
+
+    &-wrap {
+      display: block;
+      max-width: 1266px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &-wrap {
+
+    &__bundle {
+      display: none;
+    }
+
+    &--sticky-header {
+      .header-wrap {
+        &__bundle {
+          display: block;
+        }
+      }
+
+      .header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        .left(0);
+        z-index: 9999;
+
+        &__content {
+          min-height: 0;
+        }
+      }
+    }
+  }
+}
+
+.admin-bar {
+  .header-wrap {
+    &--sticky-header {
+      .header {
+        top: 32px;
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: @responsive-breakpoint2) {
+  .header {
+    &__content {
+      text-align: center;
+    }
+  }
+}
+
+// wordpress change height for admin bar
+@media screen and (max-width: 782px) {
+  .admin-bar {
+    .header-wrap--sticky-header {
+      .header {
+        top: 46px;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobile-menu-breakpoint) {
+  .header-wrap--sticky-header {
+    .header {
+      width: 100%;
+      position: static;
+      top: auto;
+      .left(auto);
+      z-index: auto;
+      clear: both;
+    }
+
+    .header-wrap {
+      &__bundle {
+        display: none;
+      }
+    }
+  }
+}

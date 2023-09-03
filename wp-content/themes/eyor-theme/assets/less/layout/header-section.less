@@ -1,0 +1,159 @@
+.header-section {
+  position: relative;
+
+  &__content {
+    height: 54px;
+
+    &--title {
+      line-height: 54px;
+    }
+
+    &--breadcrumbs {
+      display: table;
+      padding: 10px 0;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    color: @heading-one-text-color;
+
+    &-wrap {
+      &--breadcrumbs {
+        display: table-cell;
+        width: 60%;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 1.533em;
+    .mix-alternative-text();
+  }
+
+  &--with-banner {
+    // min-height:0;
+    line-height: normal;
+    padding: 0 !important;
+    color: @main-color-white;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+
+    .header-section {
+      &__simple-image {
+        &--with-breadcrumbs {
+          margin-top: -@breadcrumbs-height - 1;
+        }
+      }
+
+      &__content {
+        height: auto;
+        width: 100%;
+        padding: 0 15px;
+        position: absolute;
+        top: 50%;
+        .left(50%);
+        .translate(-50%, -50%);
+        z-index: 1;
+      }
+
+      &__title {
+        font-size: 2.800em;
+        text-shadow: @main-text-shadow;
+      }
+
+      &__description {
+        text-shadow: @main-text-shadow;
+      }
+    }
+  }
+}
+
+#dee-slider {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+#eem-slider {
+  display: none;
+  width: 100%;
+}
+
+// Masks for banner image
+.header-section-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  &--default {
+    background-color: #000;
+    opacity: .3;
+  }
+}
+
+.swish-single .header-section {
+  &--with-banner {
+    .header-section {
+      &__content {
+        margin-top: -62px;
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: @responsive-breakpoint1) {
+  .header-section {
+    // min-height:0;
+    line-height: normal;
+    padding: @layout-indent-small;
+
+    &__content {
+      height: auto;
+      line-height: normal;
+
+      &--breadcrumbs {
+        display: block;
+        padding: 0;
+        width: 100%;
+      }
+    }
+
+    &__title {
+      text-align: center;
+
+      &-wrap {
+        &--breadcrumbs {
+          display: block;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @responsive-breakpoint2) {
+  .swish-single .header-section {
+    &--with-banner {
+      .header-section {
+        &__content {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  // .header-section__simple-image img{ max-width:none; height:273px; }
+  .header-section--with-banner .header-section__content {
+    font-size: 0.5em;
+  }
+}
+

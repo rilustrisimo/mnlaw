@@ -1,0 +1,117 @@
+.qed-title__primary {
+    margin: 0 0 30px 0 !important;
+}
+.qed-icon-tick--on {
+    color: green;
+}
+.qed-icon-tick--off {
+    color: red;
+}
+.qed-qedgrid__item {
+    margin-bottom: 30px;
+}
+.qed-qedgrid__item__top {
+    position: relative;
+}
+.qed-qedgrid__item__top__image-wrap {
+    display: block;
+    border-bottom: none;
+}
+.qed-qedgrid__item__top__image-wrap:hover {
+    border-bottom: none;
+}
+.qed-qedgrid__item__price {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.qed-qedgrid .qed-qedgrid__item a {
+    border-bottom: none;
+}
+.qed-contact-info {
+    overflow: hidden;
+}
+.qed-contact-info__item {
+    margin-right: 15px;
+    float: left;
+}
+.qed-contact-info__item__icon {
+    margin-right: 5px;
+    float: left;
+}
+.qed-contact-info__item__text {
+    float: right;
+}
+.qed-social-icons__title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.qed-social-icons__icons {
+    overflow: hidden;
+}
+.qed-social-icons__icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+    border-radius: 3px;
+    background: #fcfcfc;
+    color: #fff;
+    text-align: center;
+    border-bottom: none !important;
+}
+.qed-social-icons__icon:last-child {
+    margin-right: 0;
+}
+.qed-social-icons__icon:hover {
+    color: #fff;
+    border-bottom: none;
+}
+.qed-social-icons__icon--facebook {
+    background: #3b5998;
+}
+.qed-social-icons__icon--twitter {
+    background: #00acee;
+}
+.qed-social-icons__icon--google {
+    background: #dd4b39;
+}
+.qed-social-icons__icon--pinterest {
+    background: #c8232c;
+}
+.qed-social-icons__icon--linkedin {
+    background: #0e76a8;
+}
+.qed-social-icons__icon--instagram {
+    background: #3F729B;
+}
+.qed-social-icons__icon--dribbble {
+    background: #ea4c89;
+}
+.qed-social-icons__icon--tumblr {
+    background: #5EAB1F;
+}
+.qed-social-icons__icon--vk {
+    background: #597DA3;
+}
+.qed-last-posts__item {
+    overflow: hidden;
+}
+.qed-last-posts__item__image-wrap {
+    display: block;
+    margin: 0 15px 15px 0;
+    float: left;
+    border-bottom: none;
+}
+.qed-last-posts__item__image-wrap:hover {
+    border-bottom: none;
+}
+.qed-last-posts__item__title {
+    margin: 0 0 15px;
+}
+.qed-form-block--horizontal .qed-form-block__item {
+    display: inline-block;
+}

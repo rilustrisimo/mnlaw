@@ -1,0 +1,45 @@
+.parallax{
+	&-section{
+		position:relative;
+		overflow:hidden;
+		z-index:1;
+
+		&--header{
+			height:@slider-height;
+		}
+	}
+
+	&-image{
+		width:100%;
+		background-attachment:fixed;
+		position:absolute;
+		top:0;
+		.left(0);
+		.right(0);
+		bottom:0;
+		z-index:-3;
+		
+		@media (max-width:768px) {
+			background-attachment:scroll;
+			background-position:50% 50% !important;
+			background-size:cover;
+		}
+
+		// additional class added by parallax plugin function in case if device does not support background-attachment:fixed
+		&--unsupported{
+			background-attachment:scroll;
+			background-position:50% 50% !important;
+			background-size:cover;
+		}
+	}
+}
+
+.swish-single{
+	.parallax{
+		&-section{
+			&--header{
+				height:600px;
+			}
+		}
+	}
+}

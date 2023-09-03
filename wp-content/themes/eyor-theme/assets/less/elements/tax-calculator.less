@@ -1,0 +1,1486 @@
+.tax-calculator-wrap {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  #taxCalculatorForm {
+
+	.form-block {
+	  &__item {
+
+		label, input {
+		  display: inline-block;
+		}
+
+		label {
+		  max-width: 146px;
+		  color: #353535;
+		  font:normal 400 ~"13.5px/21px" @alternative-text-family;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="number"],
+		input[type="password"] {
+		  .float(right);
+		  width: 220px;
+		  height:30px;
+		  line-height: 30px;
+		  padding: 0 20px;
+		  color: #353535;
+		  font-family: @alternative-text-family;
+		  font-weight: 400;
+		  font-size: 13px;
+		  -webkit-appearance:none;
+		  -moz-appearance:none;
+		  background: transparent;
+		}
+
+		.date-wrapper {
+		  display: inline-block;
+		  .float(right);
+		  width: 220px;
+		  position: relative;
+		  background: transparent none repeat scroll 0 0;
+		  border: 1px solid #353535;
+		  border-radius: 0;
+		  color: #353535;
+
+		  &:after {
+			content: "\f073";
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-decoration: inherit;
+			/*--adjust as necessary--*/
+			color: #005dab;
+			font-size: 15px;
+			padding-right: 11px;
+			position: absolute;
+			top: 4px;
+			right: 0;
+		  }
+
+		  input[type=text] {
+			position: relative;
+			border: none !important;
+			padding: 0 20px;
+			height:30px;
+			line-height: 30px;
+
+			&::-webkit-input-placeholder{
+			  text-transform: none;
+			  line-height: 30px;
+			}
+
+			&::-moz-placeholder{
+			  text-transform: none;
+			  line-height: 30px;
+			}
+
+			&:-ms-input-placeholder{
+			  text-transform: none;
+			  line-height: 30px;
+			}
+		  }
+		}
+
+		.bootstrap-select {
+		  max-width: 220px;
+		  .float(right);
+		  height: auto;
+		  line-height: normal;
+		  color: #353535;
+		  font:normal 400 ~"13.5px/19px" @alternative-text-family;
+
+		  .btn-default {
+			width: 220px;
+			padding: 7px 35px 7px 15px;
+			.mix-center-text();
+			height: auto;
+			line-height: normal;
+			font:normal 400 ~"13.5px/19px" @alternative-text-family;
+
+			span {
+			  font:normal 400 ~"13.5px/19px" @alternative-text-family;
+			}
+		  }
+
+		  .dropdown-menu {
+
+			  li.selected {
+
+				  a {
+					  background-color: #005dab;
+					  color: #ffffff;
+					  
+					  span.text {
+						  color: #ffffff;
+					  }
+				  }
+			  }
+
+			  li {
+
+			  	a {
+			  		line-height:19px;
+
+			  		span {
+						line-height:30px;
+			  		}
+			  	}
+			  }
+		  }
+
+		  select {
+		  	display:none !important;
+		  }
+		}
+
+	  }
+
+	  &__field {
+
+		&--includes_super,
+		&--private_health_insurance,
+		&--hecs_help_debt {
+
+		  label {
+			.float(right);
+			max-width: 220px;
+			width: 220px;
+			height: 30px;
+			line-height: 30px;
+			background-color: #f3f9ff;
+			padding: 0 10px;
+			margin-bottom: 10px;
+			position: relative;
+
+			input[type=checkbox] {
+			  position: absolute;
+			  top:8px;
+			  right:10px;
+			  z-index: 2;
+
+			  &:hover {
+				cursor: pointer;
+			  }
+			}
+		  }
+		}
+
+		// Default hidden fields
+		&--leaving_arriving_australia,
+		&--australian_citizen,
+		&--temporary_visa_holder,
+		&--permanent_visa_holder,
+		&--spouse_partner_australian_citizen,
+		&--date_arrival,
+		&--date_departure,
+		&--country_lived_in_before_arrival,
+		&--living_on_a_indefinite_basis,
+		&--living_outside_more_than_two_years,
+		&--locations_outside_australia,
+		&--home_country,
+		&--main_home,
+		&--immediate_family,
+		&--extended_family,
+		&--majority_of_time,
+		&--assets_location,
+		&--work_australian_government,
+		&--weeks_per_year,
+		&--days_per_week,
+		&--hours_per_day
+		{
+		  display: none;
+		}
+	  }
+	}
+  }
+}
+
+.tc-results {
+
+  &__wrap {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+  }
+
+  &__info {
+	color: #103876;
+	font-family: @main-font-family;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+
+	span {
+	  display: inline-block;
+	  text-align: left;
+	  min-width: 278px;
+	  color: #103876 !important;
+	  font-family: @main-font-family;
+	  font-weight: 700;
+	  font-size: 16px;
+	  line-height: 24px;
+	}
+  }
+}
+
+.pay-calculator-result {
+
+  &__title {
+	display: block;
+	width: 100%;
+	height: 32px;
+	color: #3c6eaa;
+	font-family: @main-font-family;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 32px;
+	padding: 0 10px;
+	background-color: #d9d9d9;
+	text-transform: none;
+	margin-bottom: 10px;
+  }
+
+  &__subtitle {
+	display: block;
+	width: 100%;
+	height: 32px;
+	color: #1e1e1e;
+	font-family: @alternative-text-family;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 32px;
+	padding: 0 10px;
+	text-transform: none;
+	margin-top: 10px;
+  }
+
+  &__wrap {
+
+	.paylist {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	  text-align: center;
+
+	  &-item {
+		display: inline-block;
+		margin: 15px 18px;
+
+		&__badge {
+		  display: block;
+		  width: 115px;
+		  height: 115px;
+		  background-color: #0070c0;
+		  border-radius: 50%;
+		  overflow: hidden;
+		  color: #ffffff;
+		  .mix-center-text();
+
+		  &-value {
+			display: block;
+			font-family: @main-font-family;
+			font-weight: 700;
+			font-size: 18px;
+		  }
+
+		  &-title {
+			display: block;
+			font-family: @main-font-family;
+			font-weight: 400;
+			font-size: 12px;
+			text-transform: uppercase;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+.tax-calculator-result {
+
+  &__title {
+	display: block;
+	width: 100%;
+	height: 32px;
+	color: #3c6eaa;
+	font-family: @main-font-family;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 32px;
+	padding: 0 10px;
+	background-color: #d9d9d9;
+	text-transform: none;
+	margin-bottom: 30px;
+  }
+
+  &__wrap {
+	position: relative;
+
+	&-contact {
+	  position: absolute;
+	  right:0;
+	  bottom:0;
+	  z-index: 2;
+
+	  p {
+		font-family: @main-font-family;
+		font-weight: 500;
+		font-size: 14px;
+		color: #353535;
+	  }
+
+	  a {
+
+		&.btn-contact {
+		  min-width: 124px;
+		  height:45px;
+		  background: transparent;
+		  border:2px solid #005dab;
+		  border-radius: 0;
+		  margin: 0 auto;
+		  color: #005dab;
+		  text-transform: none;
+		  .mix-center-text();
+		  .mix-transition();
+		  font-family: @main-font-family;
+		  font-weight: 500;
+		  font-size: 14px;
+
+		  &:focus, &:hover {
+			outline:0;
+			background-color: #005dab;
+			color: #ffffff;
+		  }
+		}
+	  }
+	}
+
+	.refund {
+	  background-color: #00b050;
+	}
+
+	.payable {
+	  background-color: #c55a11;
+	}
+
+	.paylist {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	  text-align: center;
+
+	  &-item {
+		display: inline-block;
+		margin: 15px 18px;
+
+
+	  }
+	}
+  }
+
+  &__badge {
+	display: block;
+	width: 115px;
+	height: 115px;
+	border-radius: 50%;
+	overflow: hidden;
+	color: #ffffff;
+	text-align: center;
+	margin: 30px auto;
+	.mix-center-text();
+
+	&-value {
+	  display: block;
+	  font-family: @main-font-family;
+	  font-weight: 700;
+	  font-size: 18px;
+	}
+
+	&-title {
+	  display: block;
+	  font-family: @main-font-family;
+	  font-weight: 400;
+	  font-size: 12px;
+	  text-transform: uppercase;
+	}
+  }
+}
+
+.taxes-pay {
+
+  &__title {
+	display: block;
+	width: 100%;
+	height: 32px;
+	color: #3c6eaa;
+	font-family: @main-font-family;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 32px;
+	padding: 0 10px;
+	background-color: #d9d9d9;
+	text-transform: none;
+	margin-bottom: 30px;
+  }
+
+  &__wrap {
+	#taxes-pay-table {
+	  max-width: 700px;
+	  width: 100%;
+	  margin: 0 auto;
+	  border: none !important;
+
+	  tbody {
+
+		tr {
+			&.outline-below {
+			  	border-bottom: 1.5px solid #d9d9d9;
+			  }
+
+		  td {
+			color: #353535;
+			font-family: @alternative-text-family;
+			font-weight: 400;
+			font-size: 13px;
+			padding: 0 18px;
+			min-width: 90px !important;
+			width: 90px !important;
+			text-align: center;
+			border: none !important;
+
+			&:first-child {
+			  min-width: 250px !important;
+			  width: 250px !important;
+			  text-align: left;
+			  padding-left: 0px;
+			}
+
+			span {
+			  display: block;
+			}
+
+			.blued {
+			  color: #103876;
+			  font-family: @main-font-family;
+			  font-weight: 500;
+			  padding-bottom: 20px;
+			}
+		  }
+
+		  &:first-child {
+
+			td {
+			  color: #353535;
+			  font-family: @main-font-family;
+			  font-weight: 700;
+			  font-size: 13px;
+			}
+		  }
+		}
+	  }
+	}
+  }
+
+  #waiver {
+	max-width: 526px;
+	margin: 40px auto;
+
+	h5 {
+	  color: #005dab;
+	  font:normal 300 ~"10px/17px" @main-font-family;
+	  margin: 0;
+	}
+
+	p {
+	  color: #7d7b81;
+	  font:normal 400 ~"9px/13px" @alternative-text-family;
+	  margin: 0;
+	}
+  }
+
+  &__contact {
+
+	p {
+	  font-family: @main-font-family;
+	  font-weight: 500;
+	  font-size: 14px;
+	  color: #353535;
+	}
+
+	a {
+
+	  &.btn-contact {
+		max-width: 124px;
+		height:45px;
+		background: transparent;
+		border:2px solid #005dab;
+		border-radius: 0;
+		margin: 0 auto;
+		color: #005dab;
+		text-transform: none;
+		.mix-center-text();
+		.mix-transition();
+		font-family: @main-font-family;
+		font-weight: 500;
+		font-size: 14px;
+
+		&:focus, &:hover {
+		  outline:0;
+		  background-color: #005dab;
+		  color: #ffffff;
+		}
+	  }
+	}
+  }
+
+  &__email-form {
+
+	&-wrap {
+	  max-width: 438px;
+	  width: 100%;
+	  border: 1px solid #353535;
+	  margin: 0 auto;
+	  padding: 20px 48px;
+
+	  p {
+		font-family: @main-font-family;
+		font-weight: 500;
+		font-size: 14px;
+		color: #103876;
+		margin: 0;
+	  }
+
+	  form.wpcf7-form {
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		input[type=email] {
+		  display: block;
+		  .float(left);
+		  width: 220px;
+		  height:30px;
+		  line-height: 30px;
+		  padding: 0 20px;
+		  color: #353535;
+		  font-family: @alternative-text-family;
+		  font-weight: 400;
+		  font-size: 13px;
+		  -webkit-appearance:none;
+		  -moz-appearance:none;
+		  background: transparent;
+		  border: 1px solid #aeaeae;
+		  border-radius: 2px;
+		  margin: 0;
+
+		  &::-webkit-input-placeholder{
+			color: #656363;
+			text-transform: none;
+			line-height: 30px;
+		  }
+
+		  &::-moz-placeholder{
+			color: #656363;
+			text-transform: none;
+			line-height: 30px;
+		  }
+
+		  &:-ms-input-placeholder{
+			color: #656363;
+			text-transform: none;
+			line-height: 30px;
+		  }
+		}
+
+		input[type=submit] {
+		  display: block;
+		  .float(right);
+		  min-width: 84px;
+		  width: 84px;
+		  height:30px;
+		  background: transparent;
+		  border:2px solid #005dab;
+		  border-radius: 0;
+		  margin: 0 auto;
+		  color: #005dab;
+		  text-transform: none;
+		  .mix-center-text();
+		  .mix-transition();
+		  font-family: @main-font-family;
+		  font-weight: 500;
+		  font-size: 14px;
+		  padding: 0;
+
+		  &:focus, &:hover {
+			outline:0;
+			background-color: #005dab;
+			color: #ffffff;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+#tax-popup {
+	display: none;
+	width:100%;
+	height:100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:99999;
+	.mix-center-text();
+	background-color: rgba(0, 0, 0, 0.6);
+
+	&__inner {
+		font-size: 30px;
+		color: #ffffff;
+	}
+}
+
+@media(max-width:@responsive-breakpoint2){
+  .tax-calculator-wrap {
+	max-width: 274px !important;
+	width: 274px !important;
+
+	#taxCalculatorForm {
+
+	  .form-block__item {
+
+		label, input {
+		  display: block;
+		}
+
+		label {
+		  max-width: 244px;
+		  margin:0 auto;
+
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="number"],
+		input[type="password"] {
+		  float: none !important;
+		  width: 244px;
+		}
+
+		.date-wrapper {
+		  display: block;
+		  float: none;
+		  width: 244px;
+
+		  &:after {
+		  }
+
+		  input[type=date] {
+			position: relative;
+			border: none !important;
+			padding: 0 20px;
+			height:30px;
+			line-height: 30px;
+
+			&::-webkit-input-placeholder{
+			  text-transform: none;
+			  line-height: 30px;
+			}
+
+			&::-moz-placeholder{
+			  text-transform: none;
+			  line-height: 30px;
+			}
+
+			&:-ms-input-placeholder{
+			  text-transform: none;
+			  line-height: 30px;
+			}
+		  }
+		}
+
+		select, .bootstrap-select {
+		  max-width: 244px;
+		  float: none;
+		  height: auto;
+		  line-height: normal;
+		  color: #353535;
+		  font:normal 400 ~"13.5px/19px" @alternative-text-family;
+
+		  .btn-default {
+			width: 244px;
+
+			span {
+
+			}
+		  }
+		}
+
+	  }
+
+	  .form-block__field--includes_super,
+	  .form-block__field--private_health_insurance,
+	  .form-block__field--hecs_help_debt {
+
+		label {
+		  float: none;;
+		  max-width: 244px;
+		  width: 244px;
+
+		  input[type=checkbox] {
+
+			&:hover {
+			}
+		  }
+		}
+	  }
+
+	  // Default hidden fields
+	  .form-block__field--leaving_arriving_australia,
+	  .form-block__field--australian_citizen,
+	  .form-block__field--temporary_visa_holder,
+	  .form-block__field--permanent_visa_holder,
+	  .form-block__field--spouse_partner_australian_citizen,
+	  .form-block__field--date_arrival,
+	  .form-block__field--date_departure,
+	  .form-block__field--country_lived_in_before_arrival,
+	  .form-block__field--living_on_a_indefinite_basis,
+	  .form-block__field--living_outside_more_than_two_years,
+	  .form-block__field--locations_outside_australia,
+	  .form-block__field--home_country,
+	  .form-block__field--main_home,
+	  .form-block__field--immediate_family,
+	  .form-block__field--extended_family,
+	  .form-block__field--majority_of_time,
+	  .form-block__field--assets_location,
+	  .form-block__field--work_australian_government
+	  {
+
+	  }
+	}
+  }
+
+  .tc-results {
+
+	&__wrap {
+
+	}
+
+	&__info {
+	  color: #103876;
+	  font-family: @main-font-family;
+	  font-weight: 700;
+	  font-size: 14px;
+	  line-height: 24px;
+
+	  span {
+		display: block;
+		.float(left);
+		text-align: left;
+		min-width: 50%;
+		color: #103876 !important;
+		font-family: @main-font-family;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 24px;
+	  }
+	}
+  }
+
+  .tax-calculator-result {
+
+	&__title {
+	}
+
+	&__wrap {
+
+	  &-contact {
+		position: static;
+		right:0;
+		bottom:0;
+		z-index: 1;
+		text-align: right;
+
+		p {
+		  display: inline-block;
+		  font-family: @main-font-family;
+		  font-weight: 500;
+		  font-size: 14px;
+		  color: #353535;
+		  line-height: 45px;
+		  margin: 0;
+		}
+
+		a {
+		  display: inline-block;
+		  .float(right);
+
+		  &.btn-contact {
+			min-width: 124px;
+			width: 124px;
+			height:45px;
+			background: transparent;
+			border:2px solid #005dab;
+			border-radius: 0;
+			.margin-left(10px);
+			color: #005dab;
+			text-transform: none;
+			.mix-center-text();
+			.mix-transition();
+			font-family: @main-font-family;
+			font-weight: 500;
+			font-size: 14px;
+
+			&:focus, &:hover {
+			  outline:0;
+			  background-color: #005dab;
+			  color: #ffffff;
+			}
+		  }
+		}
+	  }
+
+	  .refund {
+		background-color: #00b050;
+	  }
+
+	  .payable {
+		background-color: #c55a11;
+	  }
+
+	  .paylist {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		&-item {
+		  display: inline-block;
+		  margin: 0 18px 15px;
+
+
+		}
+	  }
+	}
+
+	&__badge {
+	  display: block;
+	  width: 115px;
+	  height: 115px;
+	  border-radius: 50%;
+	  overflow: hidden;
+	  color: #ffffff;
+	  text-align: center;
+	  margin: 30px auto;
+	  .mix-center-text();
+
+	  &-value {
+		display: block;
+		font-family: @main-font-family;
+		font-weight: 700;
+		font-size: 18px;
+	  }
+
+	  &-title {
+		display: block;
+		font-family: @main-font-family;
+		font-weight: 400;
+		font-size: 12px;
+		text-transform: uppercase;
+	  }
+	}
+  }
+
+  .taxes-pay {
+
+	&__title {
+	}
+
+	&__wrap {
+
+	  .table-responsive {
+		padding: 10px;
+		border: none !important;
+	  }
+
+	  #taxes-pay-table {
+
+		tbody {
+
+		  tr {
+
+			td {
+			  color: #353535;
+			  font-family: @alternative-text-family;
+			  font-weight: 400;
+			  font-size: 11px;
+			  padding: 0 18px;
+			  min-width: 90px !important;
+			  width: 90px !important;
+			  text-align: center;
+			  border: none !important;
+
+			  &:first-child {
+				min-width: 190px !important;
+				width: 190px !important;
+				text-align: left;
+			  }
+
+			  span {
+				display: block;
+			  }
+
+			  .blued {
+				color: #103876;
+				font-family: @main-font-family;
+				font-weight: 500;
+				padding-bottom: 20px;
+			  }
+			}
+
+			&:first-child {
+
+			  td {
+				color: #353535;
+				font-family: @main-font-family;
+				font-weight: 700;
+				font-size: 13px;
+			  }
+			}
+		  }
+		}
+	  }
+
+	}
+
+	#waiver {
+	  max-width: 526px;
+	  margin: 40px auto;
+
+	  h5 {
+		color: #005dab;
+		font:normal 300 ~"10px/17px" @main-font-family;
+		margin: 0;
+	  }
+
+	  p {
+		color: #7d7b81;
+		font:normal 400 ~"9px/13px" @alternative-text-family;
+		margin: 0;
+	  }
+	}
+
+	&__contact {
+
+	  p {
+		font-family: @main-font-family;
+		font-weight: 500;
+		font-size: 14px;
+		color: #353535;
+	  }
+
+	  a {
+
+		&.btn-contact {
+		  max-width: 124px;
+		  height:45px;
+		  background: transparent;
+		  border:2px solid #005dab;
+		  border-radius: 0;
+		  margin: 0 auto;
+		  color: #005dab;
+		  text-transform: none;
+		  .mix-center-text();
+		  .mix-transition();
+		  font-family: @main-font-family;
+		  font-weight: 500;
+		  font-size: 14px;
+
+		  &:focus, &:hover {
+			outline:0;
+			background-color: #005dab;
+			color: #ffffff;
+		  }
+		}
+	  }
+	}
+
+	&__email-form {
+
+	  &-wrap {
+		max-width: 438px;
+		width: 100%;
+		border: 1px solid #353535;
+		margin: 0 auto;
+		padding: 20px 48px;
+
+		p {
+		  font-family: @main-font-family;
+		  font-weight: 500;
+		  font-size: 14px;
+		  color: #103876;
+		  margin: 0;
+		}
+
+		form.wpcf7-form {
+			  margin-top: 10px;
+			  margin-bottom: 10px;
+
+			 input[type=email] {
+				display: block;
+				.float(left);
+				width: 220px;
+				height:30px;
+				line-height: 30px;
+				padding: 0 20px;
+				color: #353535;
+				font-family: @alternative-text-family;
+				font-weight: 400;
+				font-size: 13px;
+				-webkit-appearance:none;
+				-moz-appearance:none;
+				background: transparent;
+				border: 1px solid #aeaeae;
+				border-radius: 2px;
+				margin: 0;
+
+				&::-webkit-input-placeholder{
+				  color: #656363;
+				  text-transform: none;
+				  line-height: 30px;
+				}
+
+				&::-moz-placeholder{
+				  color: #656363;
+				  text-transform: none;
+				  line-height: 30px;
+				}
+
+				&:-ms-input-placeholder{
+				  color: #656363;
+				  text-transform: none;
+				  line-height: 30px;
+				}
+			  }
+
+			  input[type=submit] {
+				display: block;
+				.float(right);
+				min-width: 84px;
+				width: 84px;
+				height:30px;
+				background: transparent;
+				border:2px solid #005dab;
+				border-radius: 0;
+				margin: 0 auto;
+				color: #005dab;
+				text-transform: none;
+				.mix-center-text();
+				.mix-transition();
+				font-family: @main-font-family;
+				font-weight: 500;
+				font-size: 14px;
+				padding: 0;
+
+				&:focus, &:hover {
+				  outline:0;
+				  background-color: #005dab;
+				  color: #ffffff;
+				}
+			  }
+			}
+		
+	  }
+	}
+  }
+}
+
+@media(max-width:520px){
+  .taxes-pay {
+
+	&__title {
+	}
+
+	&__wrap {
+
+	  #taxes-pay-table {
+
+		tbody {
+
+		  tr {
+
+			td {
+
+			  &:first-child {
+
+			  }
+
+			  &:last-child {
+
+			  }
+
+			  span {
+
+			  }
+
+			  .blued {
+			  }
+			}
+
+			&:first-child {
+
+			  td {
+			  }
+			}
+		  }
+		}
+	  }
+	}
+
+	#waiver {
+
+	  h5 {
+	  }
+
+	  p {
+
+	  }
+	}
+
+	&__contact {
+
+	  p {
+
+	  }
+
+	  a {
+
+		&.btn-contact {
+
+		  &:focus, &:hover {
+
+		  }
+		}
+	  }
+	}
+
+	&__email-form {
+
+	  &-wrap {
+
+		p {
+		  text-align: center;
+		}
+
+		form.wpcf7-form {
+		  input[type=email] {
+			display: block;
+			float:none;
+			width: 100%;
+			margin-bottom: 15px;
+
+			&::-webkit-input-placeholder{
+
+			}
+
+			&::-moz-placeholder{
+
+			}
+
+			&:-ms-input-placeholder{
+
+			}
+		  }
+
+		  input[type=submit] {
+			display: block;
+			float:none;
+
+			&:focus, &:hover {
+
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+
+@media(max-width:380px){
+  .tc-results {
+
+	&__wrap {
+
+	}
+
+	&__info {
+	  color: #103876;
+	  font-family: @main-font-family;
+	  font-weight: 700;
+	  font-size: 12px;
+	  line-height: 18px;
+
+	  span {
+		display: block;
+		.float(left);
+		text-align: left;
+		min-width: 50%;
+		color: #103876 !important;
+		font-family: @main-font-family;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 18px;
+	  }
+	}
+  }
+
+  .tax-calculator-result {
+
+	&__title {
+	}
+
+	&__wrap {
+
+	  &-contact {
+		position: static;
+		right:0;
+		bottom:0;
+		z-index: 1;
+		text-align: right;
+
+		p {
+		  display: inline-block;
+		  font-family: @main-font-family;
+		  font-weight: 500;
+		  font-size: 12px;
+		  color: #353535;
+		  line-height: 30px;
+		  margin: 0;
+		}
+
+		a {
+		  display: inline-block;
+		  .float(right);
+
+		  &.btn-contact {
+			min-width: 100px;
+			width: 100px;
+			height:30px;
+			background: transparent;
+			border:2px solid #005dab;
+			border-radius: 0;
+			.margin-left(10px);
+			color: #005dab;
+			text-transform: none;
+			.mix-center-text();
+			.mix-transition();
+			font-family: @main-font-family;
+			font-weight: 500;
+			font-size: 12px;
+
+			&:focus, &:hover {
+			  outline:0;
+			  background-color: #005dab;
+			  color: #ffffff;
+			}
+		  }
+		}
+	  }
+
+	  .refund {
+		background-color: #00b050;
+	  }
+
+	  .payable {
+		background-color: #c55a11;
+	  }
+
+	  .paylist {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		&-item {
+		  display: inline-block;
+		  margin: 0 18px 15px;
+
+
+		}
+	  }
+	}
+
+	&__badge {
+	  display: block;
+	  width: 115px;
+	  height: 115px;
+	  border-radius: 50%;
+	  overflow: hidden;
+	  color: #ffffff;
+	  text-align: center;
+	  margin: 30px auto;
+	  .mix-center-text();
+
+	  &-value {
+		display: block;
+		font-family: @main-font-family;
+		font-weight: 700;
+		font-size: 18px;
+	  }
+
+	  &-title {
+		display: block;
+		font-family: @main-font-family;
+		font-weight: 400;
+		font-size: 12px;
+		text-transform: uppercase;
+	  }
+	}
+  }
+
+  .taxes-pay {
+
+	&__title {
+	}
+
+	&__wrap {
+
+	  #taxes-pay-table {
+
+		tbody {
+
+		  tr {
+
+			td {
+
+			  &:first-child {
+
+			  }
+
+			  &:last-child {
+
+			  }
+
+			  span {
+
+			  }
+
+			  .blued {
+			  }
+			}
+
+			&:first-child {
+
+			  td {
+			  }
+			}
+		  }
+		}
+	  }
+	}
+
+	#waiver {
+
+	  h5 {
+	  }
+
+	  p {
+
+	  }
+	}
+
+	&__contact {
+
+	  p {
+
+	  }
+
+	  a {
+
+		&.btn-contact {
+
+		  &:focus, &:hover {
+
+		  }
+		}
+	  }
+	}
+
+	&__email-form {
+
+	  &-wrap {
+
+		p {
+		  font-size: 16px;
+		  text-align: center;
+		}
+
+		form.wpcf7-form {
+		  input[type=email] {
+			display: block;
+			float:none;
+			width: 100%;
+			margin-bottom: 15px;
+
+			&::-webkit-input-placeholder{
+
+			}
+
+			&::-moz-placeholder{
+
+			}
+
+			&:-ms-input-placeholder{
+
+			}
+		  }
+
+		  input[type=submit] {
+			display: block;
+			float:none;
+
+			&:focus, &:hover {
+
+			}
+		  }
+		}
+	  }
+	}
+  }
+}
+
+@media(max-width:320px){
+  .tc-results {
+
+	&__wrap {
+
+	}
+
+	&__info {
+	  color: #103876;
+	  font-family: @main-font-family;
+	  font-weight: 700;
+	  font-size: 11px;
+	  line-height: 16px;
+
+	  span {
+		display: block;
+		.float(left);
+		text-align: left;
+		min-width: 50%;
+		color: #103876 !important;
+		font-family: @main-font-family;
+		font-weight: 700;
+		font-size: 11px;
+		line-height: 16px;
+	  }
+	}
+  }
+}

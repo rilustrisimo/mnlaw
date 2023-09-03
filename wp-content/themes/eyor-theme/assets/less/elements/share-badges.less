@@ -1,0 +1,178 @@
+.share-badges{
+	width:100%;
+
+	&-mobile-wrapper{
+		.share-badges{
+			border-top:none;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+	}
+
+	&__item{
+		display:inline-block;
+		width: 38px;
+		height: 38px;
+		.margin-right(15px);
+		border-radius: 50%;
+		overflow: hidden;
+
+		&:last-child {
+			.margin-right(0);
+		}
+
+		&:hover{
+			opacity:0.8;
+		}
+
+		.box{
+			display:block;
+			width:100%;
+			height:38px;
+			position:relative;
+
+			a{
+				display:block;
+				width:100%;
+				height:100%;
+				position:absolute;
+				top:0;
+				.left(0);
+				color:#ffffff;
+				font-family:FontAwesome;
+				border-bottom:none;
+				.mix-transition();
+
+				&:before{
+					display:block;
+					position:absolute;
+					top:50%;
+					.left(50%);
+					.translate(-50%, -50%);
+					font-size:1em;
+				}
+
+				&:hover{
+					color:@main-color1;
+				}
+			}
+		}
+
+		&--googleplus{
+			background-color: #dd4b39;
+			a{
+				&:hover{
+					color:#ffffff !important;
+					opacity:1;
+				}
+
+				&:before{
+					content:"\f0d5";
+				}
+			}
+		}
+
+		&--facebook{
+			background-color: #3b579d;
+			a{
+				&:hover{
+					color:#ffffff !important;
+					opacity:1;
+				}
+
+				&:before{
+					content:"\f09a";
+				}
+			}
+		}
+
+		&--twitter{
+			background-color: #5ea9dd;
+			a{
+				&:hover{
+					color:#ffffff !important;
+					opacity:1;
+				}
+
+				&:before{
+					content:"\f099";
+				}
+			}
+		}
+
+		&--delicious{
+			background-color: #3399ff;
+			a{
+				&:hover{
+					color:#ffffff !important;
+					opacity:1;
+				}
+
+				&:before{
+					content:"\f1a5";
+				}
+			}
+		}
+
+		&--stumbleupon{
+			background-color: #ea4b24;
+			a{
+				&:hover{
+					color:#ffffff !important;
+					opacity:1;
+				}
+
+				&:before{
+					content:"\f1a4";
+				}
+			}
+		}
+
+		&--linkedin{
+			background-color: #0e76a8;
+			a{
+				&:hover{
+					color:#ffffff !important;
+					opacity:1;
+				}
+
+				&:before{
+					content:"\f0e1";
+				}
+			}
+		}
+
+		&--pinterest{
+			background-color: #bd081c;
+			a{
+				&:hover{
+					color:#ffffff !important;
+					opacity:1;
+				}
+
+				&:before{
+					content:"\f0d2";
+				}
+			}
+		}
+
+		&--vk{
+			background-color: #597da3;
+			a{
+				&:hover{
+					color:#ffffff !important;
+					opacity:1;
+				}
+
+				&:before{
+					content:"\f189";
+				}
+			}
+		}
+	}
+}
